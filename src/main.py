@@ -104,3 +104,7 @@ if __name__ == "__main__":
             protect_item_group=kappa[0],
             protect_user_group=kappa[1],
             protect_user_item_group=kappa[2])
+    saver = tf.train.Saver()
+    sess = tf.Session()
+    sess.run(tf.global_variables_initializer())
+    saver.save(sess, 'my_model')
